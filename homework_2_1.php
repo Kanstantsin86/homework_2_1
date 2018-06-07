@@ -1,14 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 1
- * Date: 10.04.2018
- * Time: 17:26
- */
 
 $json = file_get_contents(__DIR__ . '/address_book.json');
 
-$address_book = json_decode($json, true);
+$addressBook = json_decode($json, true);
 
 //var_dump($address_book);
 ?>
@@ -48,7 +42,7 @@ $address_book = json_decode($json, true);
 
 
     <tbody>
-    <?php foreach ($address_book as $item => $value) { ?>
+    <?php foreach ($addressBook as $item => $value) { ?>
         <tr>
             <td><?php echo $value["firstName"]?></td>
             <td><?php echo $value["lastName"]?></td>
